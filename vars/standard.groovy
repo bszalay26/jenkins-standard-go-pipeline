@@ -3,12 +3,12 @@ def call(String... args) {
     agent any
   
     tools {
-      go ${args[0]}
+      go "${args[0]}"
     }
   
     environment {
       GO111MODULES = 'on'
-      GOLANG_CI_VERSION = ${args[1]}
+      GOLANG_CI_VERSION = "${args[1]}"
     }
     
     stages {
